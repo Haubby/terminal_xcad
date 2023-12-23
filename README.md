@@ -9,9 +9,11 @@
 * So, jumping on to the main reason why we need to tweak our terminal
 - It's because of the limited number of colors that can be displayed in a normal command prompt. The default color scheme provided by Microsoft
 
+* First of all, you need to install 'Nerd fonts' of your choice from here [^2]. By the way, I'm using 'Hack Nerd Fonts' and working perfectly on windows 11 (tested successfully)
+
 * I think I'm feeling lazy a bit, so why not you try to explore the References mentioned at the end of this article and figure out what you want out of it.
 
-* In case you may find it difficult to search for some specific icons, just refer "Nerd Fonts Cheat Sheet", serach for any icon by it's name and copy the icon according to your requirement. By the way, I'm using Hack Nord Fonts and working perfectly on windows 11 (tested successfully)
+* In case you may find it difficult to search for some specific icons, just refer "Nerd Fonts Cheat Sheet", serach for any icon by it's name and copy the icon according to your requirement. 
 
 * For your convenience, if you are using Windows 10/11, try installing WSL/ubuntu-22.04/Arch linux/kali linux from the Microsoft store
 
@@ -25,19 +27,28 @@
 
 * The file 'starwars' is the name given by me as it's a default 'starship.toml' file found on gist and 'starship.toml' is the file which I had configured myself. So, don't get confused, we only need one file that's 'starship.toml'
 
-* To load the starship on your system startup that's adding it to your environment variables, execute the below command from an elevated powershell 
+* To load the starship at the system startup/bootup, execute the below command from an elevated powershell and a file named 'Microsoft.PowerShell_profile.ps1' will open in vs code. And ofcourse you do need to install vs code on your windows system
+
 ```
 code $PROFILE
 ```
+* I've also added this 'Microsoft.PowerShell_profile.ps1' file for your convenience, so windows users do check it out as well
 
-* And then add the below lines to your '$PROFILE' and ofcourse you do need to install vs code in your system
-```
+* And then add the below variables to your 'Microsoft.PowerShell_profile.ps1' file which will be added to your environment variables 
+```ps1
+function Invoke-Starship-TransientFunction {
+  &starship module character
+}
+
+Invoke-Expression (&starship init powershell)
+
+Enable-TransientPrompt
 $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 $ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
 $ENV:STARSHIP_DISTRO = "󰖳 "
 ```
 
-* Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure vs code as mentioned here [^2]
+* Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure vs code as mentioned here [^3]
 
 
 Thanks
@@ -47,7 +58,7 @@ Thanks
 
 [^1]: _**[Make Windows Terminal look amazing!](https://www.youtube.com/watch?v=AK2JE2YsKto)**_
 
-_**[Nerd Fonts Downloads Page](https://www.nerdfonts.com/font-downloads)**_
+[^2]: _**[Nerd Fonts Downloads Page](https://www.nerdfonts.com/font-downloads)**_
 
 _**[Nerd Fonts Cheat Sheet](https://www.nerdfonts.com/cheat-sheet)**_
 
@@ -59,4 +70,4 @@ _**[Windows Terminal Themes](https://windowsterminalthemes.dev/)**_
 
 _**[unofficial Arch WSL](https://github.com/VSWSL/Arch-WSL)**_
 
-[^2]: _**[Configure VS Code to support Nerd Fonts Visual Studio Code](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.)**_
+[^3]: _**[Configure VS Code to support Nerd Fonts Visual Studio Code](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.)**_
