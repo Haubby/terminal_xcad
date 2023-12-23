@@ -45,18 +45,18 @@ Thanks
 
 ### References ~
 
-[^1]: _**[Make Windows Terminal look amazing!](https://www.youtube.com/watch?v=AK2JE2YsKto){:target="_blank"}**_
+[^1]: _**[Make Windows Terminal look amazing!](https://www.youtube.com/watch?v=AK2JE2YsKto)**_
 
-_**[Nerd Fonts Downloads Page](https://www.nerdfonts.com/font-downloads){:target="_blank"}**_
+_**[Nerd Fonts Downloads Page](https://www.nerdfonts.com/font-downloads)**_
 
-_**[Nerd Fonts Cheat Sheet](https://www.nerdfonts.com/cheat-sheet){:target="_blank"}**_
+_**[Nerd Fonts Cheat Sheet](https://www.nerdfonts.com/cheat-sheet)**_
 
-_**[Starship Homepage](https://starship.rs/guide/){:target="_blank"}**_
+_**[Starship Homepage](https://starship.rs/guide/)**_
 
-_**[Starship default config, extracted from the source](https://gist.github.com/nukopy/fe23c9517032963a4ad863356572b4dc){:target="_blank"}**_
+_**[Starship default config, extracted from the source](https://gist.github.com/nukopy/fe23c9517032963a4ad863356572b4dc)**_
 
-_**[Windows Terminal Themes](https://windowsterminalthemes.dev/){:target="_blank"}**_
+_**[Windows Terminal Themes](https://windowsterminalthemes.dev/)**_
 
-_**[unofficial Arch WSL](https://github.com/VSWSL/Arch-WSL){:target="_blank"}**_
+_**[unofficial Arch WSL](https://github.com/VSWSL/Arch-WSL)**_
 
-[^2]: _**[Configure VS Code to support Nerd Fonts Visual Studio Code](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.){:target="_blank"}**_
+[^2]: _**[Configure VS Code to support Nerd Fonts Visual Studio Code](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.)**_
