@@ -1,0 +1,258 @@
+# ~/.config/starship.toml
+
+# Timeout for starship to scan files (in milliseconds)
+scan_timeout = 30
+
+# Add a new line before the start of the prompt
+add_newline = true
+command_timeout = 10000
+
+# Configure the format of the prompt
+# format = """\
+# $os\
+# $username\
+# $hostname\
+# $kubernetes\
+# $directory\
+# $git_branch\
+# $git_status\
+# $git_metrics\
+# $fill\
+# $command_timeout $jobs $time\
+# $line_break\
+# $character"""
+
+#[directory]
+#style="blue"
+#read_only = " ⏼"
+#truncation_length = 4
+#truncate_to_repo = false
+
+# Change the default prompt format
+format = """\
+[╭](238)$env_var\
+$all[╰»](238)$character"""
+
+# Change the default prompt characters
+[character]
+success_symbol = "[❱](bold cyan)"
+error_symbol = "[⟫](red)"
+vicmd_symbol = "[](purple)"
+
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[env_var.STARSHIP_DISTRO]
+format = "[$env_value](bold white)"
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+# ---
+
+[os]
+format = "[($symbol)]($style)"
+style= "bold white"  
+disabled = false
+
+[os.symbols]
+Arch = " "
+Alpine = " "
+CentOS = " "
+Debian = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+openSUSE = " "
+Raspbian = " "
+Redhat = " "
+Ubuntu = " "
+Windows = " "
+
+# ---
+
+# Shows the username
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+disabled = false
+show_always = false
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = '[$hostname](bold cyan) '
+disabled = false
+
+# Shows current directory
+[directory]
+truncation_length = 1
+truncation_symbol = '…/'
+home_symbol = ' ~'
+read_only_style = '197'
+read_only = '  '
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+
+# [directory.substitutions]
+# "/path/to/replace" = "string/symbol"
+
+[time]
+disabled = true
+style = "bold white"
+format = '🕙[\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '-5'
+time_range = '10:00:00-14:00:00'
+
+# ---
+
+# Shows current git branch
+[git_branch]
+symbol = '   '
+format = 'via [$symbol$branch]($style)'
+# truncation_length = 4
+truncation_symbol = '…/'
+style = 'bold green'
+
+# Shows current git status
+[git_status]
+format = '[$all_status$ahead_behind]($style)'
+style = 'bold green'
+conflicted = ' 🏳'
+up_to_date = ' 󰚰 '
+untracked = '  '
+ahead = ' ⇡${count}'
+diverged = ' ⇕⇡${ahead_count}⇣${behind_count}'
+behind = ' ⇣${count}'
+stashed = '  '
+modified = '  '
+staged = '[++\($count\)](green)'
+renamed = ' 襁 '
+deleted = '  '
+
+# Shows current git state
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+# Shows git metrics
+[git_metrics]
+disabled = false
+
+# ---
+
+[line_break]
+disabled = false
+
+[cmd_duration]
+disabled = false
+min_time = 2_000
+format = "took [$duration]($style) "
+show_milliseconds = false
+style = "yellow bold"
+show_notifications = false
+min_time_to_notify = 45_000
+
+[memory_usage]
+disabled = true
+threshold = 75
+format = "via $symbol[$ram( | $swap)]($style) "
+style = "white bold dimmed"
+symbol = "󰍛 "
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 15
+style = 'bold red'
+
+# ---
+
+# AWS cloud
+[aws]
+disabled = false
+format = 'on [$symbol$profile(\($region\))]($style) '
+symbol = " "
+style = "bold yellow"
+
+# Azure cloud
+[azure]
+disabled = true
+format = 'on [$symbol$profile(\($region\))]($style) '
+symbol = "󰠅 "
+style = "bold blue"
+
+[docker_context]
+disabled = false
+symbol = " "
+style = "blue bold"
+format = "via [$symbol$context]($style) "
+only_with_files = true
+
+[dotnet]
+disabled = false
+format = "[$symbol$version( 🎯 $tfm)]($style) "
+symbol = "•NET "
+style = "blue bold"
+heuristic = true
+
+# GCP cloud
+[gcloud]
+disabled = false
+format = 'on [$symbol$account(\($region\))]($style) '
+symbol = " "
+style = "bold cyan"
+
+[helm]
+disabled = false
+format = "via [$symbol$version]($style) "
+symbol = "⎈ "
+style = "bold white"
+
+# Shows kubernetes context and namespace
+[kubernetes]
+format = '[$symbol$context( \($namespace\))](bold purple) in '
+#format = 'via [󱃾 $context\($namespace\)]($style) '
+style = "cyan bold"
+disabled = false
+symbol = "☸ "
+
+[nodejs]
+disabled = true
+symbol = " "
+
+[python]
+disabled = false
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+python_binary = "python"
+#scan_for_pyfiles = true
+format = 'via [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
+style = "yellow bold"
+symbol = " "
+
+[ruby]
+disabled = true
+symbol = " "
+
+[rust]
+disabled = true
+symbol = " "
+
+# With/without tf version
+[terraform]
+format = '[${symbol}$version $workspace]($style) '
+#format = '[${symbol} $workspace]($style) '
+symbol = "󱁢 "
+disabled = false
+
+#[shell]
+#fish_indicator = '󰈺 '
+#powershell_indicator = '_'
+#unknown_indicator = 'mystery shell'
+#style = 'cyan bold'
+#disabled = false
+
+[vagrant]
+disabled = true
