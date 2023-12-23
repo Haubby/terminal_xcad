@@ -11,7 +11,7 @@
 
 * I think I'm feeling lazy a bit, so why not you try to explore the References mentioned at the end of this article and figure out what you want out of it.
 
-* In case you may find it difficult to search for some specific icons, just refer "Nerd Fonts Cheat Sheet", serach for any icon by it's name and copy the icon according to your requirement. By the way, I'm using Hack Nord Fonts
+* In case you may find it difficult to search for some specific icons, just refer "Nerd Fonts Cheat Sheet", serach for any icon by it's name and copy the icon according to your requirement. By the way, I'm using Hack Nord Fonts and working perfectly on windows 11 (tested successfully)
 
 * For your convenience, if you are using Windows 10/11, try installing WSL/ubuntu-22.04/Arch linux/kali linux from the Microsoft store
 
@@ -23,8 +23,25 @@
 
 * I'm trying everything I can to help people understand this Article and if anything goes missing in this article feel free to ask questions or else you can do pull requests and I'll try to reply/update the responses to this article
 
+* The file 'starwars' is the name given by me as it's a default 'starship.toml' file found on gist and 'starship.toml' is the file which I had configured myself. So, don't get confused, we only need one file that's 'starship.toml'
+
+* To load the starship on your system startup that's adding it to your environment variables, execute the below command from an elevated powershell 
+```
+code $PROFILE
+```
+
+* And then add the below lines to your '$PROFILE' and ofcourse you do need to install vs code in your system
+```
+$ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+$ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
+$ENV:STARSHIP_DISTRO = "󰖳 "
+```
+
+* Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure vs code as mentioned here [^2]
+
 
 Thanks
+
 
 ### References ~
 
@@ -34,8 +51,6 @@ _**[Nerd Fonts Downloads Page](https://www.nerdfonts.com/font-downloads){:target
 
 _**[Nerd Fonts Cheat Sheet](https://www.nerdfonts.com/cheat-sheet){:target="_blank"}**_
 
-_**[Installing Nerd Fonts](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.){:target="_blank"}**_
-
 _**[Starship Homepage](https://starship.rs/guide/){:target="_blank"}**_
 
 _**[Starship default config, extracted from the source](https://gist.github.com/nukopy/fe23c9517032963a4ad863356572b4dc){:target="_blank"}**_
@@ -44,3 +59,4 @@ _**[Windows Terminal Themes](https://windowsterminalthemes.dev/){:target="_blank
 
 _**[unofficial Arch WSL](https://github.com/VSWSL/Arch-WSL){:target="_blank"}**_
 
+[^2]: _**[Configure VS Code to support Nerd Fonts Visual Studio Code](https://dev.to/owl777/how-to-show-nerd-fonts-in-visual-studio-code-15fd#:~:text=Without%20proper%20configuration%2C%20Visual%20Studio,settings%20using%20the%20keyword%20'terminal.){:target="_blank"}**_

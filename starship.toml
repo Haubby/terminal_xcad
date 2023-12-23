@@ -5,28 +5,6 @@ scan_timeout = 30
 
 # Add a new line before the start of the prompt
 add_newline = true
-command_timeout = 10000
-
-# Configure the format of the prompt
-# format = """\
-# $os\
-# $username\
-# $hostname\
-# $kubernetes\
-# $directory\
-# $git_branch\
-# $git_status\
-# $git_metrics\
-# $fill\
-# $command_timeout $jobs $time\
-# $line_break\
-# $character"""
-
-#[directory]
-#style="blue"
-#read_only = " ⏼"
-#truncation_length = 4
-#truncate_to_repo = false
 
 # Change the default prompt format
 format = """\
@@ -119,7 +97,7 @@ style = 'bold green'
 conflicted = ' 🏳'
 up_to_date = ' 󰚰 '
 untracked = '  '
-ahead = ' ⇡${count}'
+ahead = ' ⇡${count} '
 diverged = ' ⇕⇡${ahead_count}⇣${behind_count}'
 behind = ' ⇣${count}'
 stashed = '  '
