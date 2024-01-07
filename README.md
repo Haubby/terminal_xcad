@@ -21,20 +21,20 @@
 
 * Having multiple terminals of Linux without installing any hypervisor isn't that cool. Like you're running a shell inside a windows 10/11 without any VMware / Virtual Box / etc.
 
-* For Mac users, I'll suggest go with Nerd Fonts installations and then configuring starship.toml as it's already a UNIX based system
+* For Mac users, I'll suggest go with Nerd Fonts installations and then configuring `starship.toml` as it's already a UNIX based system
 
 * I'm trying everything I can to help people understand this Article and if anything goes missing in this article feel free to ask questions or else you can do pull requests and I'll try to reply/update the responses to this article
 
-* The file 'starwars' is the name given by me as it's a default 'starship.toml' file found on gist and 'starship.toml' is the file which I had configured myself. So, don't get confused, we only need one file that's 'starship.toml'
+* The file _'starwars'_ is the name given by me as it's a default 'starship.toml' file found on some opensource gist. `starship.toml` is the file which I had configured myself. So, don't get confused, we only need one file that's `starship.toml` & configure as per your convenience
 
-* To load the starship at the system startup/bootup, execute the below command from an elevated powershell and a file named 'Microsoft.PowerShell_profile.ps1' will open in vs code. And ofcourse you do need to install vs code on your windows system
+* To load the starship at the system startup/bootup, execute the below command from an elevated powershell and a file named `'Microsoft.PowerShell_profile.ps1'` will open in VS-Code. And ofcourse, you do need to install VS-Code on your windows system
 
 ```
 code $PROFILE
 ```
-* I've also added this 'Microsoft.PowerShell_profile.ps1' file for your convenience, so windows users do check it out as well
+* I've also added this `'Microsoft.PowerShell_profile.ps1'` file for your convenience, so windows users do check it out as well
 
-* And then add the below variables to your 'Microsoft.PowerShell_profile.ps1' file which will be added to your environment variables 
+* Next, add below variables to your `'Microsoft.PowerShell_profile.ps1'` file which will be added to your environment variables 
 ```ps1
 function Invoke-Starship-TransientFunction {
   &starship module character
@@ -48,7 +48,7 @@ $ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
 $ENV:STARSHIP_DISTRO = "󰖳 "
 ```
 
-* Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure vs code as mentioned here [^3]
+* Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure VS-Code as mentioned here [^3]
 
 
 Thanks
