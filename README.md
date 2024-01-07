@@ -48,7 +48,7 @@ $ENV:STARSHIP_DISTRO = "󰖳 "
 
 * Even after all the configurations you've done, if you are not able to see the icons on vscode, then you do need to configure VS-Code as mentioned here [^4]
 
-* I'm trying everything I can to help people understand this Article and if anything goes missing in this article feel free to ask questions or else you can do pull requests and I'll try to reply/update the responses to this article
+* I'm trying everything I can to help people understand this Article and if anything goes missing feel free to ask questions or else you can do pull requests and I'll try to reply/update the responses to this article
 
 Thanks
 
