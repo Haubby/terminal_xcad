@@ -1,4 +1,4 @@
-### DIY windows terminal here 👇
+### DIY Windows Terminal 
 
 * This article is all about making your windows terminal look cool
 
