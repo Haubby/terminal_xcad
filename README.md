@@ -2,9 +2,9 @@
 
 * This article is all about making your windows terminal look cool
 
-* In order to understand how it works, you need to spend some time watching the video mentioned in 'References' [^1] also you need to spend sometime on configuration of 'starship.toml' which I have already shared which I'm personally using. 
+* In order to understand how it works, you need to spend some time watching the video mentioned in 'References' [^1] also you need to spend sometime on configuration of `starship.toml` which I have already shared which I'm personally using. 
 
-* So, if you don't want to do any sort of configuration stuffs just be my guest; copy the 'starship.toml' file & I promise you won't regret it and ofcourse you can thank me later
+* So, if you don't want to do any sort of configuration stuffs just be my guest; copy the `starship.toml` file & I promise you won't regret it and ofcourse you can thank me later
 
 * So, jumping on to the main reason why we need to tweak our terminal
 - It's because of the limited number of colors that can be displayed in a normal command prompt. The default color scheme provided by Microsoft
